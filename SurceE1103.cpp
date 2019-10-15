@@ -38,6 +38,9 @@ string without_vowels(string& s)
     {
         if(x != 'A' || x != 'a' || x != 'E' || x != 'e' || x != 'O' || x != 'o' || x != 'U' || x != 'u')
             temp += x;
+        else
+            continue;
+        
     }
    return temp;
 }
