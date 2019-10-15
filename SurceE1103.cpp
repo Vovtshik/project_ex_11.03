@@ -39,6 +39,7 @@ void without_vowels(string& s)
         if(x != 'A' || x != 'a' || x != 'E' || x != 'e' || x != 'O' || x != 'o' || x != 'U' || x != 'u')
             temp += x;
     }
+    s = temp;
 }
 
 void out_file_text(vector<string>& data, string& name_f)
