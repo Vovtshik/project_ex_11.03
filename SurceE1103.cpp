@@ -1,7 +1,7 @@
 #include "std_lib_facilities.h"
 
 void in_file_text(string& name_file, vector<string>& data);
-void without_vowels(string& s);
+string without_vowels(string& s);
 void out_file_text(vector<string>& data, string& name_f);
 
 int main()
@@ -31,7 +31,7 @@ void in_file_text(string& name_file, vector<string>& data)
     }
 }
 
-void without_vowels(string& s)
+string without_vowels(string& s)
 {
     string temp;
     for(char& x : s)
@@ -39,7 +39,7 @@ void without_vowels(string& s)
         if(x != 'A' || x != 'a' || x != 'E' || x != 'e' || x != 'O' || x != 'o' || x != 'U' || x != 'u')
             temp += x;
     }
-    s = temp;
+   return temp;
 }
 
 void out_file_text(vector<string>& data, string& name_f)
@@ -48,7 +48,6 @@ void out_file_text(vector<string>& data, string& name_f)
    if (!ost) error("Unable to open output file ", name_f);
    for(string x: data)
    {
-       without_vowels(x);
-       ost << x << '\n'; 
+       ost << without_vowels(x) << '\n'; 
    }
 }
