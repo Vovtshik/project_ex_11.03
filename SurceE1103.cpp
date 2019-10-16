@@ -12,9 +12,9 @@ int main()
     cin >> name_file;
     in_file_text(name_file, data); 
     cout << "Enter the name of the output file to write text without vowels:\n";
-	string name_f;
-    cin >> name_f;
-    out_file_text(data, name_f);
+	//string name_f;
+    cin >> name_file;
+    out_file_text(data, name_file);
     return 0;
 }
 
