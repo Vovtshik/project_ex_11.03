@@ -33,13 +33,12 @@ void in_file_text(string& name_file, vector<string>& data)
 string without_vowels(string& s)
 {
     string temp;
-    for(char x : s)
+    for(char& x : s)
     {
         if(x != 'A' || x != 'a' || x != 'E' || x != 'e' || x != 'O' || x != 'o' || x != 'U' || x != 'u')
             temp += x;
-        // else
-        //     continue;
-        
+        else
+            continue;   
     }
    return temp;
 }
@@ -48,10 +47,8 @@ void out_file_text(vector<string>& data, string& name_f)
 {
    ofstream ost{name_f};
    if (!ost) error("Unable to open output file ", name_f);
-   string temp;
    for(string& x: data)
    {
-       temp = without_vowels(x);
-       ost << temp << '\n'; 
+       ost << without_vowels(x) << '\n'; 
    }
 }
