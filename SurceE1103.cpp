@@ -48,8 +48,10 @@ void out_file_text(vector<string>& data, string& name_f)
 {
    ofstream ost{name_f};
    if (!ost) error("Unable to open output file ", name_f);
+   string temp;
    for(string& x: data)
    {
-       ost << without_vowels(x) << '\n'; 
+       temp = without_vowels(x);
+       ost << temp << '\n'; 
    }
 }
