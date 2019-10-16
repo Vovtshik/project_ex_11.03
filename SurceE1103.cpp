@@ -6,7 +6,6 @@ void out_file_text(vector<string>& data, string& name_f);
 
 int main()
 {
-    setlocale(LC_ALL, "Rus");
     string name_file;
     vector<string> data;
     cout << "Enter a file name for reading text:\n";
