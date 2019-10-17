@@ -36,7 +36,7 @@ string without_vowels(string& s)
     for(char& x : s)
     {
         if(x != 'A' && x != 'a' && x != 'E' && x != 'e' && x != 'O' && x != 'o' && x != 'U' && x != 'u' && x != 'I' && x != 'i')
-        temp += x;
+            temp += x;
         else
             continue;   
     }
